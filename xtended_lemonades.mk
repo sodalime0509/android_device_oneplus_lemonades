@@ -12,13 +12,23 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/oneplus/lemonades/device.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/xtended/config/common_full_phone.mk)
 
-PRODUCT_NAME := lineage_lemonades
+PRODUCT_NAME := xtended_lemonades
 PRODUCT_DEVICE := lemonades
 PRODUCT_MANUFACTURER := OnePlus
 PRODUCT_BRAND := OnePlus
 PRODUCT_MODEL := LE2101
+
+WITH_GAPPS=true
+
+TARGET_INCLUDE_EXTRA_GAPPS=true
+TARGET_BOOT_ANIMATION_RES := 1080
+
+XTENDED_BUILD_TYPE := UNOFFICIAL
+
+XTENDED_BUILD_MAINTAINER := Nacho
+PROCESSOR_MODEL := SM8250
 
 PRODUCT_SYSTEM_NAME := OnePlus9R
 PRODUCT_SYSTEM_DEVICE := OnePlus9R
